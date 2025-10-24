@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: nif-container
-        image: nif-kurniawan/nif-image:latest # Replace with your container image
+        image: nifkurniawan/nif-image:latest # Replace with your container image
         ports:
         - containerPort: 80 # Replace with your application's port
         resources: # Optional: Resource limits and requests
