@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nif-deployment
+  labels:
+    app: nif-app
+spec:
+  replicas: 2 # Desired number of identical pods
+  selector:
+    matchLabels:
+      app: nif-app
+  template:
+    metadata:
+      labels:
+        app: nif-app
+    spec:
+      containers:
+      - name: nif-container
+        image: nif-kurniawan/nif-image:latest # Replace with your container image
+        ports:
+        - containerPort: 80 # Replace with your application's port
+        resources: # Optional: Resource limits and requests
+          limits:
+            memory: "128Mi"
+            cpu: "500m"
+          requests:
+            memory: "64Mi"
+            cpu: "250m"
