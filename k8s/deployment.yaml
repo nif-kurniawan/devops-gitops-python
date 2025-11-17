@@ -5,7 +5,7 @@ metadata:
   labels:
     app: nif-app
 spec:
-  replicas: 2 # Desired number of identical pods
+  replicas: 3 # Desired number of identical pods
   selector:
     matchLabels:
       app: nif-app
